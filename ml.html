@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grrrrr!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: pink;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        .message {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .yes-btn {
+            background-color: #ff77b5;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: #ff5f5f;
+            color: white;
+        }
+
+        .no-btn:active {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grrrrr!</h1>
+    <div class="message">YOU BETTER SAY YES</div>
+
+    <div class="buttons">
+        <button class="button yes-btn" onclick="accept()">Yes! ❤️</button>
+        <button class="button no-btn" id="no-btn" onclick="moveNo()">No 💔</button>
+    </div>
+
+    <script>
+        function accept() {
+            alert("I LOVE YOUUU BABYYYY!");
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById('no-btn');
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
